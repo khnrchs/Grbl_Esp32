@@ -10,7 +10,8 @@
 // #include "Machines/atari_1020.h"
 // #include "Machines/test_drive.h"
 #include "Machines/i2s_khdev.h"
-//#include "Machines/i2s_khdev_trinamic.h"
+// #include "Machines/i2s_khdev_trinamic.h"
+// #include "Machines/6_pack_stepstick_XYZ_v1.h"
 
 // !!! For actual use, change the line above to select a board
 // from Machines/, for example:

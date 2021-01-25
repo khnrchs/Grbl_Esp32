@@ -31,9 +31,9 @@
 #define USE_I2S_STEPS
 //#define DEFAULT_STEPPER ST_I2S_STATIC
 
-#define I2S_OUT_BCK             GPIO_NUM_17
-#define I2S_OUT_WS              GPIO_NUM_21
-#define I2S_OUT_DATA            GPIO_NUM_22
+#define I2S_OUT_BCK             GPIO_NUM_22 // SCK: Pin 11 (Shift Clock)
+#define I2S_OUT_WS              GPIO_NUM_17 // RCK: Pin 12 (Output)
+#define I2S_OUT_DATA            GPIO_NUM_21 // SI: Pin 14 (Daten)
 
 #define TRINAMIC_RUN_MODE           TrinamicMode :: CoolStep
 #define TRINAMIC_HOMING_MODE        TrinamicMode :: CoolStep
@@ -87,3 +87,6 @@
 
 // === Default settings
 #define DEFAULT_STEP_PULSE_MICROSECONDS I2S_OUT_USEC_PER_PULSE
+#define DEFAULT_X_STEPS_PER_MM      100
+#define DEFAULT_Y_STEPS_PER_MM      100
+#define DEFAULT_Z_STEPS_PER_MM      200

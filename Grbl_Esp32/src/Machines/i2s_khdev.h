@@ -37,11 +37,11 @@
 #define USE_I2S_STEPS
 //#define DEFAULT_STEPPER ST_I2S_STATIC
 
-// #define USE_STEPSTICK   // makes sure MS1,2,3 !reset and !sleep are set
+#define USE_STEPSTICK   // makes sure MS1,2,3 !reset and !sleep are set
 
-#define I2S_OUT_BCK      GPIO_NUM_22
-#define I2S_OUT_WS       GPIO_NUM_17
-#define I2S_OUT_DATA     GPIO_NUM_21
+#define I2S_OUT_BCK             GPIO_NUM_22 // SCK: Pin 11 (Shift Clock)
+#define I2S_OUT_WS              GPIO_NUM_17 // RCK: Pin 12 (Output)
+#define I2S_OUT_DATA            GPIO_NUM_21 // SI: Pin 14 (Daten)
 
 
 #define STEPPER_MS1             GPIO_NUM_23 // MOSI
