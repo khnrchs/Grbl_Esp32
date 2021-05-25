@@ -22,3 +22,4 @@ __vm/
 Grbl_Esp32.ino.cpp
 #
 *.bin
+/packages
