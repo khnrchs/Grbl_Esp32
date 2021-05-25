@@ -192,6 +192,7 @@ Error toggle_check_mode(const char* value, WebUI::AuthenticationLevel auth_level
     // is idle and ready, regardless of alarm locks. This is mainly to keep things
     // simple and consistent.
     if (sys.state == State::CheckMode) {
+        grbl_msg_sendf(CLIENT_ALL, MsgLevel::Debug, "Check mode");
         mc_reset();
         report_feedback_message(Message::Disabled);
     } else {
@@ -419,19 +420,6 @@ Error motor_disable(const char* value, WebUI::AuthenticationLevel auth_level, We
     }
     motors_set_disable(true, convertedValue);
     return Error::Ok;
-}
-
-static bool anyState() {
-    return false;
-}
-static bool idleOrJog() {
-    return sys.state != State::Idle && sys.state != State::Jog;
-}
-bool idleOrAlarm() {
-    return sys.state != State::Idle && sys.state != State::Alarm;
-}
-static bool notCycleOrHold() {
-    return sys.state == State::Cycle && sys.state == State::Hold;
 }
 
 // Commands use the same syntax as Settings, but instead of setting or
